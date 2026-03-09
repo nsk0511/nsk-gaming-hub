@@ -1,0 +1,343 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>NSK Gaming Hub</title>
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+margin:0;
+background:#0f172a;
+color:#f1f5f9;
+}
+
+header{
+background:#2563eb;
+padding:25px;
+text-align:center;
+font-size:36px;
+font-weight:bold;
+}
+
+.profile{
+background:#1e293b;
+text-align:center;
+padding:15px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+background:#020617;
+padding:10px;
+}
+
+nav button{
+background:#1e293b;
+border:none;
+padding:12px 18px;
+color:white;
+cursor:pointer;
+border-radius:6px;
+font-size:15px;
+}
+
+nav button:hover{
+background:#2563eb;
+}
+
+.section{
+display:none;
+padding:30px;
+width:85%;
+margin:auto;
+margin-top:20px;
+background:#1e293b;
+border-radius:8px;
+}
+
+.section img{
+width:100%;
+border-radius:8px;
+margin:15px 0;
+}
+
+.active{
+display:block;
+}
+
+.category-buttons{
+text-align:center;
+margin-bottom:20px;
+}
+
+.category-buttons button{
+margin:8px;
+padding:10px 15px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.game-list{
+display:none;
+margin-top:20px;
+background:#020617;
+padding:15px;
+border-radius:6px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #475569;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#2563eb;
+}
+
+footer{
+margin-top:40px;
+background:#020617;
+text-align:center;
+padding:15px;
+}
+
+</style>
+
+<script>
+
+function showSection(id){
+let sections=document.querySelectorAll(".section")
+sections.forEach(sec=>sec.classList.remove("active"))
+document.getElementById(id).classList.add("active")
+}
+
+function showCategory(id){
+let lists=document.querySelectorAll(".game-list")
+lists.forEach(list=>list.style.display="none")
+document.getElementById(id).style.display="block"
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+NSK GAMING HUB
+</header>
+
+<div class="profile">
+<h3>Naredla Santhosh Kumar Reddy</h3>
+<h4>Reg No : RA2431243020005</h4>
+</div>
+
+<nav>
+<button onclick="showSection('intro')">Introduction</button>
+<button onclick="showSection('grossing')">Highest Grossing Games</button>
+<button onclick="showSection('categories')">Game Categories</button>
+<button onclick="showSection('esports')">Esports Gaming</button>
+<button onclick="showSection('future')">Future of Gaming</button>
+</nav>
+
+<div id="intro" class="section active">
+
+<h2>Introduction to Gaming</h2>
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+
+<p>
+Video gaming has become one of the fastest growing entertainment industries in the world. From simple arcade machines in the 1980s to today's advanced gaming systems, games have evolved tremendously in graphics, storytelling, and interactivity.
+</p>
+
+<p>
+Today, gaming is played on multiple platforms including mobile phones, gaming consoles, and high-performance PCs. Millions of people around the world enjoy games not only for fun but also for competition, creativity, and social interaction.
+</p>
+
+<p>
+Gaming also plays an important role in technology development. Modern games use advanced graphics engines, artificial intelligence systems, physics simulations, and real-time networking technologies to create immersive experiences.
+</p>
+
+</div>
+
+<div id="grossing" class="section">
+
+<h2>Highest Grossing Games</h2>
+
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+
+<p>
+Some video games have generated billions of dollars in revenue through game sales, in-game purchases, downloadable content, and subscriptions. These games remain popular for many years and build large communities of players.
+</p>
+
+<h3>Mobile Games</h3>
+
+<table>
+<tr>
+<th>Game</th>
+<th>Release Year</th>
+<th>Revenue</th>
+</tr>
+
+<tr>
+<td>Honor of Kings</td>
+<td>2015</td>
+<td>$10+ Billion</td>
+</tr>
+
+<tr>
+<td>Pokemon Go</td>
+<td>2016</td>
+<td>$7+ Billion</td>
+</tr>
+
+<tr>
+<td>PUBG Mobile</td>
+<td>2018</td>
+<td>$5+ Billion</td>
+</tr>
+
+</table>
+
+<h3>PC / Console Games</h3>
+
+<table>
+<tr>
+<th>Game</th>
+<th>Release Year</th>
+<th>Revenue</th>
+</tr>
+
+<tr>
+<td>Grand Theft Auto V</td>
+<td>2013</td>
+<td>$8+ Billion</td>
+</tr>
+
+<tr>
+<td>Fortnite</td>
+<td>2017</td>
+<td>$6+ Billion</td>
+</tr>
+
+<tr>
+<td>Call of Duty Series</td>
+<td>2003</td>
+<td>$30+ Billion</td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="categories" class="section">
+
+<h2>Game Categories</h2>
+
+<div class="category-buttons">
+<button onclick="showCategory('racing')">Racing</button>
+<button onclick="showCategory('shooting')">Shooting</button>
+<button onclick="showCategory('arcade')">Arcade</button>
+<button onclick="showCategory('simulation')">Simulation</button>
+</div>
+
+<div id="racing" class="game-list">
+<h3>Racing Games</h3>
+<p>Racing games simulate driving and competitive motorsports.</p>
+<ul>
+<li>Need for Speed</li>
+<li>Forza Horizon</li>
+<li>Gran Turismo</li>
+<li>F1 Racing Series</li>
+</ul>
+</div>
+
+<div id="shooting" class="game-list">
+<h3>Shooting Games</h3>
+<p>Shooting games focus on combat and tactical gameplay.</p>
+<ul>
+<li>Call of Duty</li>
+<li>PUBG</li>
+<li>Counter Strike</li>
+<li>Fortnite</li>
+</ul>
+</div>
+
+<div id="arcade" class="game-list">
+<h3>Arcade Games</h3>
+<ul>
+<li>Pac-Man</li>
+<li>Space Invaders</li>
+<li>Street Fighter</li>
+<li>Mortal Kombat</li>
+</ul>
+</div>
+
+<div id="simulation" class="game-list">
+<h3>Simulation Games</h3>
+<ul>
+<li>Microsoft Flight Simulator</li>
+<li>The Sims</li>
+<li>Euro Truck Simulator</li>
+<li>Farming Simulator</li>
+</ul>
+</div>
+
+</div>
+
+<div id="esports" class="section">
+
+<h2>Esports Gaming</h2>
+
+<img src="https://images.unsplash.com/photo-1542751110-97427bbecf20">
+
+<p>
+Esports refers to professional competitive gaming where players compete in tournaments watched by millions of fans. These tournaments are streamed online and sometimes held in large stadiums.
+</p>
+
+<p>
+Professional esports teams train like traditional sports teams with coaches, strategies, and sponsors. Popular esports games include multiplayer battle arenas, shooting games, and strategy games.
+</p>
+
+</div>
+
+<div id="future" class="section">
+
+<h2>Future of Gaming</h2>
+
+<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
+
+<p>
+The future of gaming will be driven by technologies such as virtual reality, augmented reality, cloud gaming, and artificial intelligence. These innovations will allow players to experience games in completely new ways.
+</p>
+
+<p>
+Players may soon explore fully immersive digital worlds where they can interact, learn, work, and socialize in virtual environments.
+</p>
+
+</div>
+
+<footer>
+<p>NSK Gaming Hub | Created by Naredla Santhosh Kumar Reddy</p>
+</footer>
+
+</body>
+</html>
+```
+
